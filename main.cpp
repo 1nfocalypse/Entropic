@@ -173,7 +173,6 @@ std::string generatedKey() {
             out.append(buf, 0, rawFile.gcount());
         }
         out.append(buf, 0, rawFile.gcount());
-        // line = out
         inputLen = out.length();
     }
     rawFile.close();
@@ -257,10 +256,6 @@ void decryptHandler() {
         for (size_t i = 0; i < out.length(); ++i) {
             int encChar = static_cast<int>(out[i]);
             encChar = encChar - 32;
-            // we have a mapping btwn 0-96 -> 32-128
-            // subtract value of key char
-            // if negative, subtract from ceil (96)
-            // add 32
             int subChar = encChar - static_cast<int>(translator[key[i % key.length()]]);
             if (subChar < 0) {
                 subChar = 96 + subChar;
