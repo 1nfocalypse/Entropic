@@ -18,7 +18,7 @@
 
 # What is it?
 Entropic is a toy implementation of a Viginère Cipher. Viginère Ciphers are a polyalphabetic cipher dating back to the 1500s, and remained unbroken for approximately three centuries afterwards. They were broken via a method called
-Kasiski analysis, which utlized the characteristic of a repeated key over a large enough bit of ciphertext to find patterns, from which information could be further enumerated. More on Kasiski analysis can be found [here](https://en.wikipedia.org/wiki/Vigen%C3%A8re_cipher#Kasiski_examination).
+Kasiski analysis, which utilized the characteristic of a repeated key over a large enough bit of ciphertext to find patterns, from which information could be further enumerated. More on Kasiski analysis can be found [here](https://en.wikipedia.org/wiki/Vigen%C3%A8re_cipher#Kasiski_examination).
 While these ciphers are vulnerable when used with a block key, they retain unbroken in the context of Vernam One Time Pads, which are randomly generated keys that stretch the entire length of the cleartext. Since the key is never repeated
 and is truly random, Kasiski analysis fails. A simulation of a Vernam One-Time Pad can be found implemented here, however, does not possess the same characteristics, as the string is pseudorandomly generated via a Mersenne Twister.
 Alternatively, if a user is sufficiently capable of producing a truly random string, then they could utilize it as a custom key within the program to obtain a legitimate One-Time Pad. However, this is not encouraged, as there are markedly
